@@ -1,0 +1,29 @@
+// 11-3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+#include <fstream>
+#define class_size 20
+
+int main()
+{
+    ifstream in_stream;
+    in_stream.open("datain.txt");
+    ofstream out_stream;
+    out_stream.open("dataout.txt");
+
+
+    int in_data[class_size];
+    double sum = 0;
+    double average = 0;
+    for (int i = 0; i < class_size; i++)
+    {
+        in_stream >> in_data[i];
+        cout << in_data[i] << ", ";
+        sum = sum + in_data[i];
+    }
+    average = sum / class_size;
+    cout << "\n The average score is: " << average;
+    out_stream << "\n The average score is " << average;
+    return 0;
+}
