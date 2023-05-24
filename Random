@@ -1,0 +1,22 @@
+// Random.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+#include <time.h>
+int main()
+{
+	srand(time(0));
+	bool stop = false;
+	char answer = 'y';
+	while (stop == false)
+	{
+		cout << "The first outcome is: " << 1 + rand() % 6 << endl;
+		cout << "Do you want to continue (Y/N)?" << endl;
+		cin >> answer;
+		if ((answer == 'n') || (answer == 'N'))
+		{
+			stop = true;
+		}
+
+	}
+}
