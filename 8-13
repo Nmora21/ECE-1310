@@ -1,0 +1,28 @@
+/* 8-13.cpp : Write a C program which include the following function called “distance”, with the call-by-value method.  
+The function prototype is
+double distance(double x1, double y1, double x2, double y2)
+*/
+
+#include <iostream>
+using namespace std;
+double distance(double &x1, double &y1, double &x2, double &y2);
+
+int main()
+{
+    double a, b, c, d;
+    cout << "Please enter x1: ";
+    cin >> a;
+    cout << "Please enter x2: ";
+    cin >> b;
+    cout << "Please enter y1: ";
+    cin >> c;
+    cout << "Please enter y2: ";
+    cin >> d;
+    cout << "The distance is " << distance(a, c, b, d);
+ 
+}
+
+double distance(double &x1, double &y1, double &x2, double &y2)
+{
+    return sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
+}
