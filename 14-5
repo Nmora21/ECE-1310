@@ -1,0 +1,28 @@
+// 14-5.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node* p_to_a_node;
+};
+
+int main()
+{
+    Node n1, n2, n3, * t;
+    n1.data = 1;
+    n2.data = 2;
+    n3.data = 3;
+    n1.p_to_a_node = &n2;
+    n2.p_to_a_node = &n3;
+    n3.p_to_a_node = &n1;
+    t = &n1;
+    for (int i = 1; i <= 4; i++)
+    {
+        cout << t->data << " ";
+        t = t->p_to_a_node;
+    }
+    return 0;
+}
