@@ -1,0 +1,55 @@
+// 15-8.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int myatoi(const char*);
+int main()
+{
+    int x = 0;
+    x = myatoi("123");
+    cout << x << "\n";
+    return 0;
+}
+
+int myatoi(const char* p)
+{
+    int length = strlen(p);
+    cout << "The number of digits is " << length << "\n";
+    char letter = *p; //value the pointer points to
+    int digit = 0;
+    int number = 0;
+    for (int i = length; i >= 1; i--)
+    {
+        switch (letter)
+        {
+        case '0': digit = 0;
+            break;
+        case '1': digit = 1;
+            break;
+        case '2': digit = 2;
+            break;
+        case '3': digit = 3;
+            break;
+        case '4': digit = 4;
+            break;
+        case '5': digit = 5;
+            break;
+        case '6': digit = 6;
+            break;
+        case '7': digit = 7;
+            break;
+        case '8': digit = 8;
+            break;
+        case '9': digit = 9;
+            break;
+        default: digit = 0;
+            break;
+        }
+        number = digit * pow(10, i - 1) + number; //1x10^2 +2x10^1 + 3x10^0
+        letter = *(p + (length - i + 1)); //next char in the sequence
+    }
+    return number;
+}
