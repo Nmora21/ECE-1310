@@ -1,0 +1,19 @@
+// Pointers.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i = 1;
+    int j = 2;
+    int* pi; //memory address
+    int* pj;  //memory address
+    pi = &i; //value in memory address
+    pj = &j;  //value in memory address
+
+    int sum;
+    sum = *pi + *pj; //value that the pointer points to
+
+}
+
