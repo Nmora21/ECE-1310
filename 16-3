@@ -1,0 +1,19 @@
+// 16-3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+
+int main()
+{
+    unsigned int a = 0x0000FFFF; //0000 x 4 + 1111 x 4 <= FFFF in hex
+    unsigned int b = 0x22221111; //0010 x 4 + 0001 x 4 <= 1111 in hex
+    unsigned int c = 0x00000000;
+    printf("a: % 08x\n", a);
+    printf("b: % 08x\n", b);
+    c = a & b; //0000 x 4 + 0001 x 4
+    printf("AND result : % 08x\n", c);
+    c = a | b; //0010 x 4 + 1111 x 4
+    printf("OR result % 08x\n", c);
+    c = a ^ b; //0010 x 4 + 1110 x 4 <=XOR: values must be different
+    printf("XOR result % 08x\n", c);
+    return 0;
+}
