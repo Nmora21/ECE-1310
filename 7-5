@@ -1,0 +1,28 @@
+// 7-5.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    int head = 0;
+    int x;
+    while (i <= 1000)
+    {
+        x = rand() % 2;
+        if (x == 1)
+        {
+            cout << "heads" << endl;
+            head++;
+        }
+        else
+        {
+            cout << "tails" << endl;
+        }
+        i++;
+    }
+    cout << "There are " << head << " heads" << endl;
+    
+}
