@@ -1,0 +1,12 @@
+#include <math.h>  //Some IDE have already preloaded this
+#include <iostream>
+using namespace std;
+int main()
+{
+    double r,x;
+    cout << "Please enter a positive number: ";
+    cin >> x;
+    r = sqrt(x); //Parameter is what you have to provide for the function
+    cout << r << endl;
+    return 0;
+}
