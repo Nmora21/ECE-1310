@@ -1,0 +1,41 @@
+// sum.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    int prod = 1;
+    for (int i = 1; i <= 15; i = i + 2)
+    {
+        prod = prod * i;
+    }
+    cout << prod << endl;
+    cout << i; //outer i is till 0
+
+    int sum1 = 0;
+    int sum2 = 0;
+    for (int j = 1; j <= 3; j++)
+    {
+        sum2 = 0;
+        for (int i = 1; i <= j; i++)
+        {
+            sum2 = sum2 + i;
+            cout << "\n sum2 is now " << sum2;
+        }
+        sum1 = sum1 + sum2;
+        cout << "\n sum 1 is currently " << sum1;
+    }
+    cout << "\n The result is " << sum1 << endl;
+
+    int j = 99;
+    int sum = 0;
+    for (j = 1; j < 10; j++)
+    {
+        sum = sum + j;
+        cout << j << '\t';
+    }
+    cout << "\n The outer i is " << j;
+}
+
