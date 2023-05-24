@@ -1,0 +1,32 @@
+/* Write a C program which include the following function called “distance”, call-by-value method. 
+The function prototype is
+double distance(Point p1, Point p2) 
+This function shall calculate and return the distance between the two points objects p1 and p2, where p1 is (x1, y1) and p2 is (x2, y2).
+*/
+
+#include <iostream>
+using namespace std;
+struct Point
+{
+    int x;
+    int y;
+};
+double distance(Point p1, Point p2);
+
+int main()
+{
+    Point p1;
+    Point p2;
+    p1.x = 5;
+    p1.y = 9;
+    p2.x = 2;
+    p2.y = 8;
+    cout << distance(p1, p2);
+}
+
+double distance(Point p1, Point p2)
+{
+    double d = 0;
+    d = sqrt(((p1.x - p2.x) * (p1.x - p2.x)) + ((p1.y - p2.y) * (p1.y - p2.y)));
+    return d;
+}
