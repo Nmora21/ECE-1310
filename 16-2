@@ -1,0 +1,13 @@
+// 16-2.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+
+int main()
+{
+   // unsigned int a = 0xFFFFFFFF; //1111 x 8 => 32 1s
+    unsigned int a = 0x11111111; //0001 x 8
+    printf(" % 08x\n", a);   //print out the number in hex format
+    a = ~a; //1110 = e    //NOT operation -> flips the bit originally 32 1s
+    printf(" % 08x\n", a);
+    return 0;
+}
