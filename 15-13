@@ -1,0 +1,17 @@
+// 15-13.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string phrase;
+    string adjective, noun;
+    cout << "enter an adjective ...";
+    getline(cin, adjective);
+    cout << "now, enter a noun with two words...";
+    getline(cin, noun);
+    phrase = "I love " + adjective + " " + noun + "!";
+    cout << phrase << endl;
+    return 0;
+}
