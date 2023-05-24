@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+	char a[20], b[20], c[20];
+	cin >> a;
+	cout << "\n string a has length" << strlen(a) << "\n"; //no spaces
+	strcpy_s(b, a);
+	cout << "\n after strcpy, string b is " << b << "\n";
+	cout << "\n enter a string c ...";
+	cin >> c;
+	cout << "\n compare string b and c results in ..." << strcmp(b, c) << "\n";
+	strcat_s(a, c);
+	cout << "\n cancatenate strings a and c results in ..." << a << " \n";
+	return 0;
+}
