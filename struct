@@ -1,0 +1,29 @@
+// struct.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+struct Temperature
+{
+    char scale;
+    double degree;
+};
+void main()
+{
+    bool AC_switch = 0;
+    Temperature room;
+    room.scale = 'F';
+    room.degree = 99;
+    if (room.degree >= 78)
+        AC_switch = 1;
+    else
+    AC_switch = 0;
+    while (room.degree >= 78)
+    {
+        AC_switch = 1;
+        room.degree -= 1;
+        cout << "\n The current tempe is " << room.degree << room.scale;
+    }
+    AC_switch = 0;
+    cout << "\n The current temp is " << room.degree << room.scale;
+}
