@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n1,n2;
+    cout << "\n Input a number:";
+    cin >> n1;
+    cout << "\n Input another number:";
+    cin >> n2;
+    
+    if (n2 % n1==0)  
+    {
+        cout << n1 << " is a multiple of " << n2;
+    }
+    else 
+    {
+        
+        cout << n1 << " is not a multiple of " << n2;
+    }
+   
+            return 0;
+    }
