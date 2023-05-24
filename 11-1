@@ -1,0 +1,19 @@
+// 11-1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+#define class_size 15
+
+int main()
+{
+    int n[15] = { 84,66,77, 78,89,92,61,91,65,72,70,85,97,65,84 };
+    double sum = 0;
+    double average = 0;
+    for (int i = 0; i < 15; i++)
+    {
+        cout << n[i] << ", ";
+        sum = sum + n[i];
+    }
+    average = sum / 15;
+    cout << "\n The average score is: " << average;
+}
