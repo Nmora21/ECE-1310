@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+void printarray(int[], int);  //function prototype
+
+void changeContent(int arrayx[], int sizeX)
+{
+    for (int i = 0; i <= sizeX - 1; i++)
+    {
+        arrayx[i] = rand() % 6; //random number from [0,5] to the array
+    }
+}
+
+bool linear_search(int arrayx[], int size, int key)
+{
+    bool found = false;
+    int current_inx = 0;
+    cout << "the key is " << key << "\n";
+    while ((found == false) && (current_inx < size)) //false until proven otherwise
+    {//cout<<" item "<<current_inx<<" is "<<arrayx[current_inx];
+        if (arrayx[current_inx] == key)
+            found = true;
+        else
+            current_inx = current_inx + 1;
+    }
+    return found; //found == false
+}
+
+int main()
+{
+    const int sizeA = 10;
+    int arrayA[sizeA] = { 3,2,5,7,1,8,0,2,9,10 };
+    printarray(arrayA, sizeA);  //function call with two parameters
+    changeContent(arrayA, sizeA);
+    printarray(arrayA, sizeA);
+    int key = 0;
+    cout << "Enter a number you want to find: ";
+    cin >> key;
+    if (linear_search(arrayA, sizeA, key) == true)
+    {
+        cout << "The key is found ";
+    }
+    else
+    {
+        cout << "The key is not found";
+    }
+    return 0;
+}
+
+void printarray(int arrayx[], int sizeX)  //syntax of passing arrays to a function
+{
+    for (int i = 0; i <= sizeX - 1; i++)
+        cout << arrayx[i] << "\n";
+    cout << endl;
+}
