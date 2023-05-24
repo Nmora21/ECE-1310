@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    char a[80];
+    cin.getline(a, 30);
+
+    //cin>>a;
+    cout << strlen(a);
+    return 0;
+}
