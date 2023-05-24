@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n1;
+    double price;
+    cout << "Enter age: ";
+    cin >> n1;
+    if (n1 >= 55)  
+    {
+        price = 10.00;
+        cout << "$" << price;
+    }
+    else
+    {
+        if (n1 >= 18) 
+        {
+            price = 15.00;
+            cout << "$" << price;
+        }
+        else
+        {
+            if (n1 > 12)  
+            {
+                price = 7.00;
+                cout << "$" << price;
+            }
+            else
+            {
+                price = 5.00;
+                cout << "$" << price;
+            }
+        }
+    }
+}
