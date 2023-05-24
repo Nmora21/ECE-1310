@@ -1,0 +1,25 @@
+// 14-8.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+void function_A(int x)
+{
+    cout << "\n" << x + 1;
+}
+
+void function_B(int y)
+{
+    cout << "\n " << y - 1;
+}
+
+int main()
+{
+    void (*foo)(int);
+    foo = function_A;
+    foo(2);
+    (*foo)(2);//alternative way
+    foo = function_B;
+    foo(2);
+    (*foo)(2);
+    return 0;
+}
