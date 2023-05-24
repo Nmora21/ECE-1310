@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    char s1[20], s2[20];
+    cout << "enter the first string..."; //User enters a sentence
+    cin.getline(s1, 20);
+    cout << "enter the second string...";
+    cin.getline(s2, 20);
+    cout << s1 << s2;
+    return 0;
+}
