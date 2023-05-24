@@ -1,0 +1,18 @@
+// 14.9.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    const char* suit[4] = { "Hearts","Diamonds","Clubs","Spades" }; //each element is a pointer pointing to a character
+        //Each element in the array is a pointer pointing to a string.
+        cout << "\n"<<suit[0];
+        cout << "\n"<<suit[1];
+
+        cout << "\n"<<suit[2];
+
+        cout << "\n"<<suit[3];
+
+        return 0;
+
+}
