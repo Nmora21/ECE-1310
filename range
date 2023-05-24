@@ -1,0 +1,14 @@
+// range.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int sum = 0;
+    for (int i = 1; i <= 20; i++)
+    {
+        sum = sum + i;
+        cout << "\n The current sum is " << sum;
+    }
+}
