@@ -1,0 +1,20 @@
+#include <math.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double x;
+    cout << "Please enter a number: ";
+    cin >> x;
+    double y = floor (x);
+    double z = ceil(x);
+    if (y == z)
+    {
+        cout << "The number is a whole number";
+    }
+    else
+    {
+        cout << "The number is not a whole number";
+    }
+       
