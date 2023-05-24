@@ -1,0 +1,28 @@
+// 16-4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+
+//shift left example
+
+int main()
+{
+    unsigned int a = 0x0000FFFF;
+    a = a << 1;
+    printf("shift left 1 bit:    %08x\n ", a);
+    return 0;
+
+
+
+}
+
+
+/*shift right example
+
+int main()
+{
+    unsigned int a = 0x0000FFFF;
+    a = a >> 4;
+    printf("shift right 4 bit:   %08x\n ", a);
+    return 0;
+}
+*/
