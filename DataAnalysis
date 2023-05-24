@@ -1,0 +1,105 @@
+// DataAnalysis.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+struct Student_Data
+{
+    char ID;
+    int score;
+};
+
+void printarray(Student_Data array[], int size)  //syntax of passing arrays to a function
+{
+    for (int i = 0; i <= size - 1; i++)
+    {
+cout << array[i].score << ", ";
+    }
+    
+    cout << endl;
+}
+
+void insertion_sort(Student_Data array[], int size)
+{
+    int i = 1, j = 0;
+        Student_Data temp;
+    while (i < size)
+    {
+        j = i;
+        while ((j > 0) && (array[j - 1].score > array[j].score))
+        {
+            temp = array[j];
+            array[j] = array[j - 1];
+            array[j - 1] = temp;
+            j = j - 1;
+        }
+        i = i + 1;
+    }
+}
+
+double calculate_median(Student_Data array[], int size)
+{
+    int i = 0;
+    while ( i <(size/2))
+    {
+        i++;
+    }
+  return array[i].score;
+
+}
+
+
+
+double calculate_mean(Student_Data array[], int size)
+{
+    double sum = 0;
+    double avg = 0;
+    for (int i = 0; i < size; i++)
+    {
+        sum = sum + array[i].score;
+    }
+    avg = sum / size;
+    return avg;
+}
+
+int main()
+{
+    Student_Data ECE1310[15];
+    ECE1310[0].ID = 'A';
+    ECE1310[0].score = 84;
+    ECE1310[1].ID = 'B';
+    ECE1310[1].score = 66;
+    ECE1310[2].ID = 'C';
+    ECE1310[2].score = 77;
+    ECE1310[3].ID = 'D';
+    ECE1310[3].score = 78;
+    ECE1310[4].ID = 'E';
+    ECE1310[4].score = 89;
+    ECE1310[5].ID = 'F';
+    ECE1310[5].score = 92;
+    ECE1310[6].ID = 'G';
+    ECE1310[6].score = 61;
+    ECE1310[7].ID = 'H';
+    ECE1310[7].score = 91;
+    ECE1310[8].ID = 'I';
+    ECE1310[8].score = 65;
+    ECE1310[9].ID = 'J';
+    ECE1310[9].score = 72;
+    ECE1310[10].ID = 'K';
+    ECE1310[10].score = 70;
+    ECE1310[11].ID = 'L';
+    ECE1310[11].score = 85;
+    ECE1310[12].ID = 'M';
+    ECE1310[12].score = 97;
+    ECE1310[13].ID = 'N';
+    ECE1310[13].score = 65;
+    ECE1310[14].ID = 'O';
+    ECE1310[14].score = 84;
+
+    cout << "The mean is " << calculate_mean(ECE1310, 15) << endl;
+    insertion_sort(ECE1310, 15);
+    printarray(ECE1310, 15);
+cout << "The median score is " << calculate_median(ECE1310, 15) << endl;
+  
+}
